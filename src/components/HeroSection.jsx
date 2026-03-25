@@ -14,7 +14,7 @@ export default function HeroSection({ navigate, user }) {
       setWordIndex(prev => (prev + 1) % words.length);
     }, 2200);
     return () => clearInterval(timer); 
-  }, []);
+  }, [words.length]);
 
   return (
     <div style={{ position:'relative', padding:'100px 24px 72px', textAlign:'center', overflow:'hidden' }}>
